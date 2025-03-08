@@ -10,6 +10,7 @@ class ProductFilter extends AbstractFilter
     public const COLORS = 'colors';
     public const PRICES = 'prices';
     public const TAGS = 'tags';
+
     protected function getCallbacks(): array
     {
         return [
