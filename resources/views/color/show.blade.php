@@ -46,6 +46,10 @@
                                     <td>Title</td>
                                     <td>{{ $color->title }}</td>
                                 </tr>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>{{ $color->name }}</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>

@@ -33,7 +33,7 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Code</th>
+                                    <th>Name</th>
                                     <th>Color</th>
                                 </tr>
                                 </thead>
@@ -41,7 +41,7 @@
                                 @foreach($colors as $color)
                                     <tr>
                                         <td>{{ $color->id }}</td>
-                                        <td><a href="{{ route('color.show', $color->id) }}">{{ $color->title }}</a></td>
+                                        <td><a href="{{ route('color.show', $color->id) }}">{{ $color->name }}</a></td>
                                         <td><div style="width: 16px; height: 16px; background: {{ '#' . $color->title }}"></div></td>
                                     </tr>
                                 @endforeach

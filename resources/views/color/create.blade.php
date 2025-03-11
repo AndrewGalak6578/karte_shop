@@ -30,6 +30,9 @@
                         <input type="text" name="title" class="form-control" placeholder="Code (no #)">
                     </div>
                     <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Actual color name">
+                    </div>
+                    <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Add">
                     </div>
 

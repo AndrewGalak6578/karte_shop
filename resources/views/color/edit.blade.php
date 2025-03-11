@@ -26,7 +26,12 @@
                     @csrf
                     @method('PATCH')
                     <div class="form-group">
+                        <label>Title (Code)</label>
                         <input type="text" name="title" class="form-control" placeholder="Type Title" value="{{ $color->title }}">
+                    </div>
+                    <div class="form-group">
+                        <label>Name (Actual Title)</label>
+                        <input type="text" name="name" class="form-control" placeholder="Type Name" value="{{ $color->name ? : "" }}">
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Edit">
