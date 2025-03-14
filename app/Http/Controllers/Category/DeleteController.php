@@ -10,6 +10,7 @@ class DeleteController extends Controller
 {
     public function __invoke(Category $category)
     {
+        $category->unset();
         $category->delete();
 
         return redirect()->route('category.index');

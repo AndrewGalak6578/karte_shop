@@ -5,11 +5,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tags</h1>
+                    <h1 class="m-0">Sizes</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item active">Main/Tags</li>
+                        <li class="breadcrumb-item active">Main/Sizes</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -25,7 +25,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="{{ route('tag.create') }}" class="btn btn-primary">Create</a>
+                            <a href="{{ route('size.create') }}" class="btn btn-primary">Create</a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
@@ -37,10 +37,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($tags as $tag)
+                                @foreach($sizes as $size)
                                     <tr>
-                                        <td>{{ $tag->id }}</td>
-                                        <td><a href="{{ route('tag.show', $tag->id) }}">{{ $tag->title }}</a></td>
+                                        <td>{{ $size->id }}</td>
+                                        <td><a href="{{ route('size.show', $size->id) }}">{{ $size->title }}</a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

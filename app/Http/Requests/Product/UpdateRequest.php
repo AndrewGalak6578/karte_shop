@@ -34,6 +34,7 @@ class UpdateRequest extends FormRequest
             'group_id' => 'nullable|integer',
             'tags' => 'nullable|array',
             'colors' => 'nullable|array',
+            'sizes' => 'nullable|array',
         ];
     }
 }

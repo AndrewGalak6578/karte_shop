@@ -94,13 +94,28 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>Sizes</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select name="sizes[]" class="tags" multiple="multiple"
+                                                    data-placeholder="Select sizes"
+                                                    style="width: 100%;">
+                                                @foreach($sizes as $size)
+                                                    <option value="{{ $size->id }}" selected
+                                                            disabled>{{ $size->title }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>Colors</td>
                                     <td>
                                         <div class="form-group">
                                             <select name="colors[]" class="colors" multiple="multiple" data-placeholder="Select color"
                                                     style="width: 100%;">
                                                 @foreach($colors as $color)
-                                                    <option value="{{ $color->id }}" selected>{{ $color->title }}</option>
+                                                    <option value="{{ $color->id }}" selected>{{ $color->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>

@@ -24,7 +24,8 @@ class UpdateController extends Controller
         }
         $tagsIds = $data['tags'];
         $colorsIds = $data['colors'];
-        unset($data['tags'], $data['colors']);
+        $sizesIds = $data['sizes'];
+        unset($data['tags'], $data['colors'], $data['sizes']);
 
         if ($data['is_published'] == null) {
             $data['is_published'] = 0;
@@ -35,6 +36,8 @@ class UpdateController extends Controller
         $product->tags()->sync($tagsIds);
 
         $product->colors()->sync($colorsIds);
+
+        $product->sizes()->sync($sizesIds);
 
 
         return redirect()->route('product.show', $product->id);

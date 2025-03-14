@@ -59,3 +59,12 @@ Route::group(['prefix' => 'groups'], function () {
     Route::patch('/{group}', \App\Http\Controllers\Group\UpdateController::class)->name('group.update');
     Route::delete('/{group}', \App\Http\Controllers\Group\DeleteController::class)->name('group.delete');
 });
+Route::group(['prefix' => 'sizes'], function () {
+    Route::get('/', \App\Http\Controllers\Size\IndexController::class)->name('size.index');
+    Route::get('/create', \App\Http\Controllers\Size\CreateController::class)->name('size.create');
+    Route::post('/', \App\Http\Controllers\Size\StoreController::class)->name('size.store');
+    Route::get('/{size}/edit', \App\Http\Controllers\Size\EditController::class)->name('size.edit');
+    Route::get('/{size}', \App\Http\Controllers\Size\ShowController::class)->name('size.show');
+    Route::patch('/{size}', \App\Http\Controllers\Size\UpdateController::class)->name('size.update');
+    Route::delete('/{size}', \App\Http\Controllers\Size\DeleteController::class)->name('size.delete');
+});

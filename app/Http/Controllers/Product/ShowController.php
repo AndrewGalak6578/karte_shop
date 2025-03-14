@@ -13,7 +13,8 @@ class ShowController extends Controller
     {
         $tags = $product->tags()->get();
         $colors = $product->colors()->get();
+        $sizes = $product->sizes()->get();
 
-        return view('product.show', compact('product', 'tags', 'colors'));
+        return view('product.show', compact('product', 'tags', 'colors', 'sizes'));
     }
 }

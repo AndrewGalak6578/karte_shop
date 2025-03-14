@@ -12,6 +12,8 @@ class DeleteController extends Controller
     {
         $product->tags()->detach();
         $product->colors()->detach();
+        $product->images()->delete();
+        $product->sizes()->detach();
 
         $product->delete();
 

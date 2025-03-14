@@ -5,11 +5,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Add Tag</h1>
+                    <h1 class="m-0">Add Size</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item active">Main/Tags</li>
+                        <li class="breadcrumb-item active">Main/Sizes</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <form action="{{ route('tag.store') }}" method="post">
+                <form action="{{ route('size.store') }}" method="post">
                     @csrf
                     @method('POST')
 

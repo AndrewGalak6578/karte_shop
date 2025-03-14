@@ -7,6 +7,7 @@ use App\Http\Requests\Product\StoreRequest;
 use App\Models\ColorProduct;
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\ProductSize;
 use App\Models\ProductTag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -25,7 +26,8 @@ class StoreController extends Controller
 
         $tagsIds = $data['tags'];
         $colorsIds = $data['colors'];
-        unset($data['tags'], $data['colors'], $data['product_images']);
+        $sizesIds = $data['sizes'];
+        unset($data['tags'], $data['colors'], $data['product_images'], $data['sizes']);
 
         $product = Product::firstOrCreate([
             'title' => $data['title'],
@@ -35,6 +37,12 @@ class StoreController extends Controller
             ProductTag::firstOrCreate([
                 'product_id' => $product->id,
                 'tag_id' => $tagId,
+            ]);
+        }
+        foreach ($sizesIds as $sizeId) {
+            ProductSize::firstOrCreate([
+                'product_id' => $product->id,
+                'size_id' => $sizeId,
             ]);
         }
         foreach ($colorsIds as $colorId) {
